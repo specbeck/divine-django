@@ -1,4 +1,3 @@
 images/
-gallery/__pycache__/
-divine_django/__pycache__/
-db.sqlite3
+*.sqlite3
+__pycache__/
