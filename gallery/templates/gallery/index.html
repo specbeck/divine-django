@@ -38,10 +38,15 @@
                     <div class="gallery-image"><img src="{% static '/images/ig.jpg' %}" alt="Bright picture at the India Gate"></div>
                     <div class="gallery-image"><img src="{% static '/images/rb.jpg' %}" alt="The gang at the Rastrapati Bhawan"></div>
                     <div class="gallery-image"><img src="{% static '/images/mount.jpg' %}" alt="Peak of the ARSD 'infamous' mountain "></div>                    
+                    {% block image %}
+                        {% if image %}
+                            <div class="gallery-image"><img src="{{ image }}" alt="{{ alt }}"></div>
+                        {% endif %}
+                    {% endblock image %}
                 </div>
             </section>
             <section id="ops">
-                <div class="oper"><a href="">Add an image </a></div>
+                <div class="oper"><a href="{% url 'gallery:create' %}">Add an image </a></div>
             </section>
         </main>
         <footer>
