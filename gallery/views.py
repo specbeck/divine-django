@@ -4,7 +4,7 @@ from django import forms
 from PIL import Image
 import cv2, os
 class ImageUpload(forms.Form):
-    image = forms.FileField(label="Upload an image")
+    image = forms.ImageField(label="Upload an image")
     alt = forms.CharField(label="Enter alt text")
 
 
@@ -14,18 +14,20 @@ def index(request):
 
 def create(request):
     if request.method == "POST":
-        image = request.POST.get("image")
-        alt = request.POST.get("alt")
-        dir = "gallery/static/images/"
-        file = cv2.imread(image)
-        os.chdir(dir)
-        cv2.imwrite(image, file)
-        # filename = f"images/{image}"
-        # default_storage.save(image, image)
-        return render(request, "gallery/index.html", {
-            "image" : image,
-            "alt" : alt
-        })
+        form = ImageUpload(request.POST, request.FILES)
+        if form.is_valid():
+            
+            image = request.FILES["image"]
+            alt = request.POST.get("alt")
+            image_name = default_storage.save(image.name, image)
+            return render(request, "gallery/index.html", {
+                "image" : default_storage.url(image_name),
+                "alt" : alt
+            })
+        else:
+            return render(request, "gallery/create.html", {
+                "form" : form
+            })
     return render(request, "gallery/create.html", {
-        "image" : ImageUpload()
+        "form" : ImageUpload()
     })

@@ -3,10 +3,11 @@
 {% block image %}
     <div class="gallery-image">
         <form action="{% url 'gallery:create' %}" method="post">
-            <label for="image"> Upload an image </label>
-            <input type="file" id="image" name="image" accept="image/png, image/jpeg" /> 
+            {{ form }}
+            {% comment %} <label for="image"> Upload an image </label>
+            <inp    ut type="file" id="image" name="image" accept="image/png, image/jpeg" /> 
             <label for="alt"> Add a description/alt text </label>
-            <input type="text" id="alt" name="alt" />
+            <input type="text" id="alt" name="alt" /> {% endcomment %}
             {% csrf_token %}
             <input type="submit" value="Add image">
         </form>
