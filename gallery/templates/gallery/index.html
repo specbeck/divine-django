@@ -37,15 +37,8 @@
                     {% for memory in memories %}
                         <div class="gallery-image"><img src="/media/{{ memory.image }}" alt="{{ memory.description }}"></div>
                     {% endfor %}
-                        <div class="gallery-image"><img src="{% static '/images/ig.jpg' %}" alt="Bright picture at the India Gate"></div>
-                    <div class="gallery-image"><img src="{% static '/images/rb.jpg' %}" alt="The gang at the Rastrapati Bhawan"></div>
-                    <div class="gallery-image"><img src="{% static '/images/mount.jpg' %}" alt="Peak of the ARSD 'infamous' mountain "></div>                    
-                    {% block images %}
-                        {% if image %}
-                            <div class="gallery-image"><img src="{{ image }}" alt="{{ alt }}"></div>
-                        {% endif %}
-                    {% endblock images %}
-                </div>
+                    {% block add %}
+                    {% endblock add %}
             </section>
             <section id="ops">
                 <div class="oper"><a href="{% url 'gallery:create' %}">Add an image </a></div>

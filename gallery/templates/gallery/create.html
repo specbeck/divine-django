@@ -1,6 +1,6 @@
 {% extends "gallery/index.html" %}
 
-{% block image %}
+{% block add %}
     <div class="gallery-image">
         <form action="{% url 'gallery:create' %}" enctype="multipart/form-data" method="post">
             {{ form }}
@@ -12,4 +12,4 @@
             <input type="submit" value="Add image">
         </form>
     </div>
-{% endblock image %}
+{% endblock add %}
