@@ -2,7 +2,7 @@
 
 {% block image %}
     <div class="gallery-image">
-        <form action="{% url 'gallery:create' %}" method="post">
+        <form action="{% url 'gallery:create' %}" enctype="multipart/form-data" method="post">
             {{ form }}
             {% comment %} <label for="image"> Upload an image </label>
             <inp    ut type="file" id="image" name="image" accept="image/png, image/jpeg" /> 
