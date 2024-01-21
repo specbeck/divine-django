@@ -4,8 +4,9 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        
-        <link rel="stylesheet" href="{% static 'gallery/styles.css' %}" />
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="{% static 'gallery/styles.css' %}?{% now "U" %}" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
@@ -43,12 +44,13 @@
             <section id="ops">
                 <div class="oper"><a href="{% url 'gallery:create' %}">Add an image </a></div>
             </section>
+        </div>
         </main>
         <footer>
             <section id="about">
                 <h1 class="content">About</h1>
                 <div class="credits">
-                    <p>It is all about the <span class="bold">journey</span>.</p>
+                    <p>Cause, it's all about the <span class="bold">journey</span>.</p>
                     <p><span class="italic">Made by all of us, with love</span></p>
                 </div>
             </section>
