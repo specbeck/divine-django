@@ -1,0 +1,42 @@
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: block;
+}
+
+header {
+    width: 100%;
+    display: block;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav li {
+    padding: 10px;
+    margin: 10px;
+}
+
+h1 {
+    min-height: 200px;
+    margin: auto 0;
+    padding: 50px;
+}
+
+main a {
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
