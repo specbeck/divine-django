@@ -1,12 +1,36 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static "default/styles.css" %}?{% now "U" %}" >
     </head>
     <body>
-        <h1> This is the home </h1>
-        <ul><h2> Check out the apps in this project below </h2>
-            <li> <a href="{% url 'gallery:index' %}"> The configurable memory lane </a></li>
-        </ul>
+        <header>
+            <nav>
+                <ul>
+                    <li><a>Main</a></li>
+                    <li><a>Display</a></li>
+                    <li><a>About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+        <main>
+            <h1> divine-django </h1>
+            <h2> built apps in this project  </h2>
+            <ul>
+                <li> <a href="{% url 'gallery:index' %}"> The configurable memory lane </a></li>
+            </ul>
+        </main>
+        
+        <footer>
+            <hr>
+            <p><em>django at its finest</em></p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
 </html>

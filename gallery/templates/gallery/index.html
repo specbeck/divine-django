@@ -36,7 +36,7 @@
                 <div class="gallery">
                     <h1 class="content">The Gallery</h1>
                     {% for memory in memories %}
-                        <div class="gallery-image"><img src="/media/{{ memory.image }}" alt="{{ memory.description }}"></div>
+                        <div class="gallery-image"><img src="/media/{{ memory.image }}" alt="{{ memory.description }} height="100%" width="100%" ></div>
                     {% endfor %}
                     {% block add %}
                     {% endblock add %}
