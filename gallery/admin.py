@@ -4,3 +4,4 @@ from .models import Memory
 
 # Register your models here.
 admin.site.register(Memory)
+# admin.site.register(User)

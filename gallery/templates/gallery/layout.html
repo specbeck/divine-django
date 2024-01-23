@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="{% static 'gallery/styles.css' %}?{% now "U" %}" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
+        <title>Memory lane</title>
+    </head>
+    <body>
+        <header>
+            <div class="nav-bar">
+                <nav>
+                    <ul>
+                        {% block nav %}
+                        {% endblock nav %}
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            {% block hero %}
+            {% endblock hero %}
+            <section id="gallery">
+                <div class="gallery">
+            {% block main %}
+            
+            {% block add %}
+            {% endblock add %}
+        
+            {% endblock main %}
+        </section>
+    </div>
+        </main>
+        <footer>
+            <section id="about">
+                <h1 class="content">About</h1>
+                <div class="credits">
+                    <p>Cause, it's all about the <span class="bold">journey</span>.</p>
+                    <p><span class="italic">Made by all of us, with love</span></p>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

@@ -1,59 +1,26 @@
-{% load static %}
+{% extends "gallery/layout.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="keywords" content="">
-        <meta name="description" content="">
-        <link rel="stylesheet" href="{% static 'gallery/styles.css' %}?{% now "U" %}" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
-        <title>Memories</title>
-    </head>
-    <body>
-        <header>
-            <div class="nav-bar">
-                <nav>
-                    <ul>
-                        <li class="nav-link"><a href="#introduction" >HOME</a></li>
-                        <li class="nav-link"><a href="#gallery" >GALLERY</a></li>
-                        <li class="nav-link"><a href="#about">ABOUT</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <main>
-            <section id="introduction">
-                <div class="content">
-                    <h1>Welcome to our town!</h1>
-                    <p> Here's one to our memories, Enjoy!</p>
-                </div>
-            </section>
-            <section id="gallery">
-                <div class="gallery">
-                    <h1 class="content">The Gallery</h1>
-                    {% for memory in memories %}
-                        <div class="gallery-image"><img src="/media/{{ memory.image }}" alt="{{ memory.description }} height="100%" width="100%" ></div>
-                    {% endfor %}
-                    {% block add %}
-                    {% endblock add %}
-            </section>
-            <section id="ops">
-                <div class="oper"><a href="{% url 'gallery:create' %}">Add an image </a></div>
-            </section>
-        </div>
-        </main>
-        <footer>
-            <section id="about">
-                <h1 class="content">About</h1>
-                <div class="credits">
-                    <p>Cause, it's all about the <span class="bold">journey</span>.</p>
-                    <p><span class="italic">Made by all of us, with love</span></p>
-                </div>
-            </section>
-        </footer>
-    </body>
-</html>
+{% block nav %}
+    <li class="nav-link"><a href="#introduction" >HOME</a></li>
+    <li class="nav-link"><a href="#gallery" >GALLERY</a></li>
+    <li class="nav-link"><a href="#about">ABOUT</a></li>
+{% endblock nav %}
+
+{% block hero %}
+<section id="introduction">
+    <div class="content">
+        <h1>Welcome to our town!</h1>
+        <p> Here's one to our memories, Enjoy!</p>
+    </div>
+</section>
+{% endblock hero %}
+
+{% block main %}
+        <h1 class="content">The Gallery</h1>
+        {% for memory in memories %}
+            <div class="gallery-image"><img src="/media/{{ memory.image }}" alt="{{ memory.description }}" height="100%" width="100%" ></div>
+        {% endfor %}
+        <section id="ops">
+            <div class="oper"><a href="{% url 'gallery:create' %}">Add an image </a></div>
+        </section>
+{% endblock main %}
