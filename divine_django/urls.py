@@ -22,7 +22,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("default.urls")),
-    path("gallery/", include("gallery.urls"))
+    path("gallery/", include("gallery.urls")),
+    path("loopy/", include("loopy.urls"))
 ]
 # Serving the media files in development mode
 if settings.DEBUG:
