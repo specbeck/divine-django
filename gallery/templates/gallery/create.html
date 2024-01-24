@@ -1,5 +1,9 @@
 {% extends "gallery/layout.html" %}
 
+{% block nav %}
+    <h1> Adding new image </h1>
+{% endblock nav %}
+
 {% block add %}
     <div class="gallery-image">
         <form action="{% url 'gallery:create' %}" enctype="multipart/form-data" method="post">

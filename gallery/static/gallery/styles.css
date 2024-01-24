@@ -121,8 +121,9 @@ main {
   display: block;
   border: 1px solid snow;
   border-radius: 8px;
-  margin: 10px 10px;
-  background-color: black;
+  margin: 40px;
+  background-color: #000000;
+  overflow:visible;
 }
 
 img {

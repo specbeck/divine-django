@@ -5,7 +5,8 @@ from django.urls import reverse
 from .models import Memory
 class ImageUpload(forms.Form):
     image = forms.ImageField(label="Upload an image")
-    alt = forms.CharField(label="Enter alt text")
+    alt = forms.CharField(label="Enter alt text depicting the image")
+    name = forms.CharField(label="Enter your name")
 
 # Create your views here.
 def index(request):
