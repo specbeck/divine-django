@@ -1,20 +1,26 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Loopy: Loopstation sim </title>
-        <link rel="stylesheet" src="{% static "loopy/styles.css" %}"
+        <link rel="stylesheet" href="{% static "loopy/styles.css" %}?{% now "U" %}" >
     </head>
     <body>
-        <header>Loopstation sim</header>
+        <header>
+            <h1>Loopstation sim</h1>
+        </header>
         <main>
-            <div class="main-box">
-        <div class="main-circle-buttons"></div>
-        <div class="main-circle-buttons"></div>
-        <div class="main-circle-buttons"></div>
-        <div class="main-circle-buttons"></div>
-        <div class="main-circle-buttons"></div>
+        <div class="main-box">
+            <div class="main-circles">
+                <div class="main-circle-buttons"></div>
+                <div class="main-circle-buttons"></div>
+                <div class="main-circle-buttons"></div>
+                <div class="main-circle-buttons"></div>
+                <div class="main-circle-buttons"></div>
             </div>
+        </div>
     </main>
-        <footer>Loopstation fwr</footer>
+        <footer>Loopstation forever</footer>
     </body>
 </html>

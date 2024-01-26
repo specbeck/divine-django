@@ -18,12 +18,17 @@
 {% block main %}
         <h1 class="content">The Gallery</h1>
         {% for memory in memories %}
-            <div class="gallery-image">
-                <img src="/media/{{ memory.image }}" alt="{{ memory.description }}" height="100%" width="100%" >
+            <div class="memory">
+                <div class="gallery-image">
+                    <img src="/media/{{ memory.image }}" alt="{{ memory.description }}" height="100%" width="100%" >
+                </div> 
                 <p>{{ memory.description }} <br>- {{ memory.poster }}</p>
-            </div>            
+            </div>         
         {% endfor %}
-        <section id="ops">
-            <div class="oper"><a href="{% url 'gallery:create' %}">Add an image </a></div>
-        </section>
 {% endblock main %}
+
+{% block unnamed %}
+<section id="ops">
+    <div class="oper"><a href="{% url 'gallery:create' %}">Add an image </a></div>
+</section>
+{% endblock unnamed %}
