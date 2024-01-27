@@ -20,8 +20,9 @@ def create(request):
         form = ImageUpload(request.POST, request.FILES)
         if form.is_valid():
             image = request.FILES["image"]
-            alt = request.POST.get("alt")
-            memory = Memory(image=image, description=alt)
+            alt = request.POST.get("alt")   
+            name = request.POST.get("name")
+            memory = Memory(image=image, description=alt, poster=name)
             memory.save()
             return HttpResponseRedirect(reverse("gallery:index"))
         else:
