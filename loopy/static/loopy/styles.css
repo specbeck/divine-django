@@ -15,8 +15,51 @@ body {
 }
 
 .modifier-area {
-    height: 40%;
+    height: 38%;
     width: 100%;
+    border: 1px solid snow;
+    display: flex;
+}
+
+.dial-abcd {
+    width: 20%;
+    height: 100%;
+    border: 4px solid rebeccapurple;
+    position: relative;
+}
+
+.buttons {
+    width: 20%;
+    height: 100%;
+    border: 3px solid rosybrown;
+}
+
+.screen {
+    width: 30%;
+    height: 100%;
+    border: 4px solid blue;
+}
+
+.dial-abcd > .dial {
+    width: 80px;
+    height: 80px;
+    background-color: aquamarine;
+    border-radius: 100%;
+}
+
+.abcd-button {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.abcd-buttons {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
 }
 
 .sound-block {
@@ -48,8 +91,8 @@ body {
 }
 
 .playnpause {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border: 10px solid grey;
     border-radius: 100%;
     margin: auto;

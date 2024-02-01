@@ -154,9 +154,26 @@ img {
 #about {
   padding: 10px;
   width: 100%;
-  height: 30vh;
+  height: auto;
   text-align: center;
   background-color: #0A0903; 
+}
+
+#ops {
+  padding: 10px;
+  border: 1px solid snow;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+#ops  a {
+  color: snow;
+}
+
+#ops:hover {
+  border: 1px solid black;
+  color: black;
+  background-color: #00ff00;
 }
 
 

@@ -37,8 +37,6 @@
             {% endblock main %}
         </section>
     </div>
-    {% block unnamed %}
-    {% endblock unnamed %}
         </main>
         <footer>
             <section id="about">
@@ -46,6 +44,8 @@
                 <div class="credits">
                     <p>Cause, it's all about the <span class="bold">journey</span>.</p>
                     <p><span class="italic">Made by all of us, with love</span></p>
+                    {% block unnamed %}
+                    {% endblock unnamed %}
                 </div>
             </section>
         </footer>
