@@ -27,7 +27,7 @@ body {
   );
   padding: 0;
 }
-
+  
 
 .nav-bar {
   width: 100%;
@@ -83,6 +83,7 @@ nav>ul {
 main {
   padding-top: 25vh;
   margin: 0;
+  width: 100%;
 }
 
 #introduction {
@@ -151,26 +152,35 @@ img {
   display: block;
 }
 
+footer {
+  height: auto;
+  display: block;
+}
+
 #about {
   padding: 10px;
   width: 100%;
   height: auto;
   text-align: center;
-  background-color: #0A0903; 
+  background-color: #0A0903;
 }
 
-#ops {
-  padding: 10px;
+#ops a {
+  text-decoration: none;
+  color: snow;
+  display: inline-block;
   border: 1px solid snow;
   display: inline-block;
   border-radius: 10px;
+  padding: 5px;
+  box-shadow: 3px 3px snow;
 }
 
-#ops  a {
-  color: snow;
-}
 
-#ops:hover {
+#ops a:hover {
+  box-shadow: none;
+  margin-left: 3px;
+  margin-top: 3px;
   border: 1px solid black;
   color: black;
   background-color: #00ff00;
