@@ -23,7 +23,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("default.urls")),
     path("gallery/", include("gallery.urls")),
-    path("loopy/", include("loopy.urls"))
+    path("loopy/", include("loopy.urls")),
+    path("squishy/", include("squishy.urls"))
 ]
 # Serving the media files in development mode
 if settings.DEBUG:

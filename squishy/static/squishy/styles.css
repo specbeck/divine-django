@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+}
+
+#main-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.medium-button {
+    border: 2px solid snow;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    /* box-shadow: 4px 4px white; */
+    background-color: orange;
+}
+
+.small-button {
+    border: 2px solid snow;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    /* box-shadow: 4px 4px white; */
+    background-color: greenyellow;
+}
+
+.large-button {
+    background-color: orangered;
+    border: 2px solid snow;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    /* box-shadow: 4px 4px white; */
+}
+
+.small-button:hover {
+    /* box-shadow: none;
+    margin-left: 4px;
+    margin-top: 4px; */
+    scale: 1.1;
+}
+
+.medium-button:hover {
+    scale: 1.5;
+    transform: rotate(0.3turn);
+}
+
+.large-button:hover {
+    scale: 2;
+    rotate: 0.7turn;
+}

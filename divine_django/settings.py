@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     "default",
     "gallery",
     "loopy",
+    "squishy",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
