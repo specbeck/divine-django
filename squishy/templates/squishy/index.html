@@ -1,1 +1,19 @@
 {% extends "squishy/layout.html" %}
+
+{% block body %}
+    {% for value in map %}
+        {% if value == "large" %}
+            <div class="large-wrapper">
+                <div class="large-button"></div>
+            </div>
+        {% elif value == "small" %}
+            <div class="small-wrapper">
+                <div class="small-button"></div>
+            </div>
+        {% else %}
+            <div class="medium-wrapper">
+                <div class="medium-button"></div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock body %}
