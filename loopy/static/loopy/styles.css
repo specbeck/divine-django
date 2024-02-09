@@ -1,10 +1,19 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: orange;
+    text-align: center;
+    font-family: 'Protest Riot', sans-serif;
+    color: white
+}
+
+header {
+    font-size: larger;
 }
 
 .main-box {
+    color: black;
+    font-family: 'Inter', sans-serif;
     width: 80%;
     height: 80vh;
     margin: 0 auto;
@@ -32,7 +41,52 @@ body {
     width: 20%;
     height: 100%;
     border: 3px solid rosybrown;
+    position: relative;
 }
+
+.oval-wrapper {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    width: 80%;
+    justify-content: space-evenly;
+    border: 1px solid snow;
+    padding: 0 5px;
+}
+
+.tempo-small-oval {
+    height: 25px;
+    width: 60px;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+.control-wrapper {
+    position: absolute;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    right: 0;
+}
+
+#special-div {
+    border: 1px solid white;
+    height: 50%;
+    padding: 10px;
+    justify-content: right;
+}
+
+
+.screen-controllers {
+    display: block;
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
 
 .screen {
     width: 30%;
@@ -95,10 +149,11 @@ body {
     display: flex;
     justify-content: space-between;
     border: 1px solid snow;
-    width: 90%;
-    padding: 8px;
+    width: 110%;
+    padding: 8px 4px;
     position: absolute;
     bottom: 10px;
+    right: -20px;
 }
 
 .small-dial {

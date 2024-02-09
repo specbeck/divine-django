@@ -5,6 +5,10 @@
     <head>
         <title>Loopy: Loopstation sim </title>
         <link rel="stylesheet" href="{% static "loopy/styles.css" %}?{% now "U" %}" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">    
     </head>
     <body>
         <header>
@@ -23,7 +27,16 @@
                         <div class="abcd-button">D</div>
                     </div>
                 </div>
-                <div class="buttons"></div>
+                <div class="buttons">
+                    <div class="control-wrapper">
+                    <div class="screen-controllers"></div>
+                    <div class="screen-controllers"></div>
+                    </div>
+                    <div class="oval-wrapper">
+                        <div class="tempo-small-oval"></div>
+                        <div class="tempo-small-oval"></div>
+                    </div>
+                </div>
                 <div class="screen">
                     <div class="main-display"></div>
                     <div class="small-dial-section">
@@ -33,7 +46,22 @@
                         <div class="small-dial"></div>
                     </div>
                 </div>
-                <div class="buttons"></div>
+                <div class="buttons">
+                    <div class="control-wrapper">
+                        <div class="screen-controllers"></div>
+                        <div class="screen-controllers"></div>
+                        <div class="screen-controllers"></div>
+                        <div class="screen-controllers"></div>
+                    </div>
+                    <div id="special-div">
+                        <div id="special-dial" class="small-dial"></div>
+                        <div class="screen-controllers"></div>
+                    </div>
+                    <div class="oval-wrapper">
+                        <div class="tempo-small-oval"></div>
+                        <div class="tempo-small-oval"></div>
+                    </div>
+                </div>
                 <div class="dial-abcd">
                     <div class="dial"></div>
                     <div class="edit-button"></div>
