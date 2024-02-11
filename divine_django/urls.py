@@ -24,7 +24,8 @@ urlpatterns = [
     path("", include("default.urls")),
     path("gallery/", include("gallery.urls")),
     path("loopy/", include("loopy.urls")),
-    path("squishy/", include("squishy.urls"))
+    path("squishy/", include("squishy.urls")),
+    path("leveling/", include("leveling.urls"))
 ]
 # Serving the media files in development mode
 if settings.DEBUG:

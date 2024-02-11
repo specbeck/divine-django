@@ -1,18 +1,21 @@
 body {
     background-color: whitesmoke;
     font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+    margin: 20px 50px;
+    border: 1px solid black;
+    justify-self: center;    
 }
 
 #h1-wrapper {
     height: 300px;
     width: 500px;
-
     padding: 20px;
 }
 
 h1 {
     text-align: left;
-    font-size: 128px;
+    font-size: 108px;
     color: white;
     text-shadow:
     -1px -1px #000,
@@ -88,7 +91,7 @@ h1:hover {
     background-color: lime;
     width: 25px;
     height: 25px;
-    border-radius: 10px;
+    border-radius: 7px;
 }
 
 .vlarge-button {
@@ -97,12 +100,12 @@ h1:hover {
     height: 400px;
 }
 
-.small-button:hover {
+/* .small-button:hover {
     box-shadow: none;
     margin-left: 5px;
     margin-top: 5px;
     /* scale: 1.1; */
-}
+} */
 
 .medium-button:hover {
     /* scale: 1.5;
@@ -112,7 +115,7 @@ h1:hover {
     margin-top: 5px;
 }
 
-.large-button:hover, .small-button:hover, .medium-button:hover, .vlarge-button:hover, .vsmall-button:hover {
+.large-button:hover, .medium-button:hover, .vlarge-button:hover, .vsmall-button:hover {
     /* scale: 2;
     rotate: 0.7turn; */
     box-shadow: none;
@@ -131,16 +134,20 @@ h1:hover {
 
 @keyframes rotate {
     0%{
-        border-top-color: gold;
+        border-top-color: red;
+        /* border-top-width: 3px; */
     }
     25%{
-        border-right-color: gold;
+        border-right-color: red;
+        /* border-right-width: 3px; */
     }
     50%{
-        border-bottom-color: gold;
+        border-bottom-color: red;
+        /* border-bottom-width: 3px; */
     }
     75%{
-        border-left-color: gold;
+        border-left-color: red;
+        /* border-left-width: 3px; */
     }
     
     
