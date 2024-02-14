@@ -1,0 +1,15 @@
+{% extends "squishy/layout.html" %}
+
+{% block body %}
+    <div id="pixel-container">
+    {% for value in map %}
+        {% if value == "large" %}
+            <div class="large-pixel"></div>
+        {% elif value == "small" %}
+            <div class="small-pixel"></div>
+        {% elif value == "medium" %}
+            <div class="medium-pixel"></div>    
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endblock body %}

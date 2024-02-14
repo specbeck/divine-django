@@ -187,3 +187,34 @@ h1:hover {
     
 }
 
+
+
+/* Pixel styles */
+
+#pixel-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.small-pixel {
+    width: 1px;
+    height: 1px;
+    background-color: green;
+}
+
+.medium-pixel {
+    width: 1px;
+    height: 1px;
+    background-color: blue;
+    display: inline;
+}
+
+.large-pixel {
+    width: 1px;
+    height: 1px;
+    background-color: red;
+}
+
+.small-pixel:hover, .large-pixel:hover, .medium-pixel:hover {
+    transform: rotateY('180deg');
+}
