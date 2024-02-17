@@ -2,33 +2,35 @@
 
 {% block body %}
     <div id="h1-wrapper">
-        <h1>Squishy </br> Stuff</h1>
+        <h1>Squishy Stuff</h1>
     </div>
     {% for value in map %}
         {% if value == "large" %}
             <div class="large-wrapper">
-                <div class="large-button"></div>
+                <div class="large-button button" data-color="orange"></div>
             </div>
         {% elif value == "vsmall" %}
             <div class="vsmall-wrapper">
-                <div class="vsmall-button"></div>
+                <div class="vsmall-button button" data-color="lime"></div>
             </div>
         {% elif value == "vlarge" %}
             <div class="vlarge-wrapper">
-                <div class="vlarge-button"></div>
+                <div class="vlarge-button button" data-color="red"></div>
             </div>
         {% elif value == "small" %}
             <div class="small-wrapper">
-                <div class="small-button"></div>
+                <div class="small-button button" data-color="yellowgreen"></div>
             </div>
         {% else %}
             <div class="medium-wrapper">
-                <div class="medium-button"></div>
+                <div class="medium-button button" data-color="yellow"></div>
             </div>
         {% endif %}
     {% endfor %}
     <div class="chunky-wrapper">
         <div class="chunky"></div>
     </div>
-    <h1><i>Feeling squishy, yet?</i> </h1>
+    <div id="h1-wrapper">
+        <h1><i>Feeling squishy, yet?</i> </h1>
+    </div>
 {% endblock body %}
