@@ -9,19 +9,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-
-                
-                document.querySelectorAll('#main-container .button').forEach(div => {
-                    div.onmouseover = () => {
-                        document.querySelector('body').style.background = div.dataset.color;
-                        //document.querySelectorAll('#h1-wrapper').forEach(h => { h.style.color = div.dataset.color });
-                    //div.onmouseleave = () => { document.querySelector('body').style.background = "whitesmoke";}
-                    }
-                });
-            });
-        </script>
+        {% block js %}
+        {% endblock js %}
     </head>
     <body>
         <div id="main-container">
